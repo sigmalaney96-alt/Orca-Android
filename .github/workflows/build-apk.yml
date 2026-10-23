@@ -47,7 +47,7 @@ jobs:
           java-version: '8'
 
       - name: Prepare private release signing key
-        if: ${{ secrets.ORCA_RELEASE_KEYSTORE_BASE64 != '' && secrets.ORCA_RELEASE_KEYSTORE_PASSWORD != '' && secrets.ORCA_RELEASE_KEY_ALIAS != '' && secrets.ORCA_RELEASE_KEY_PASSWORD != '' }}
+        if: env.ORCA_RELEASE_KEYSTORE_BASE64 != '' && env.ORCA_RELEASE_KEYSTORE_PASSWORD != '' && env.ORCA_RELEASE_KEY_ALIAS != '' && env.ORCA_RELEASE_KEY_PASSWORD != ''
         run: |
           printf '%s' "$ORCA_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$ORCA_RELEASE_STORE_FILE"
           test -s "$ORCA_RELEASE_STORE_FILE"
