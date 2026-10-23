@@ -2,12 +2,22 @@ apply plugin: 'com.android.application'
 apply plugin: 'idea'
 apply from: "$rootDir/gradle/android-lint.gradle"
 
+def orcaReleaseSigning = [
+        storeFile: System.getenv("ORCA_RELEASE_STORE_FILE"),
+        storePassword: System.getenv("ORCA_RELEASE_KEYSTORE_PASSWORD"),
+        keyAlias: System.getenv("ORCA_RELEASE_KEY_ALIAS"),
+        keyPassword: System.getenv("ORCA_RELEASE_KEY_PASSWORD"),
+]
+def hasOrcaReleaseSigning = orcaReleaseSigning.values().every {
+    it != null && !it.isEmpty()
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "org.chromium.chrome"
-        minSdkVersion rootProject.ext.minSdkVersion
+        applicationId "com.orca.browser"
+        minSdkVersion 26
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
@@ -24,10 +34,23 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    signingConfigs {
+        if (hasOrcaReleaseSigning) {
+            release {
+                storeFile file(orcaReleaseSigning.storeFile)
+                storePassword orcaReleaseSigning.storePassword
+                keyAlias orcaReleaseSigning.keyAlias
+                keyPassword orcaReleaseSigning.keyPassword
+            }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (hasOrcaReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
     dexOptions {
@@ -85,8 +108,9 @@ dependencies {
     implementation "com.google.android.gms:play-services-vision:$rootProject.ext.gmsVersion"
     implementation "com.google.android.gms:play-services-vision-common:$rootProject.ext.gmsVersion"
     implementation "com.google.android.gms:play-services-fido:$rootProject.ext.gmsVersion"
-    implementation "com.google.vr:sdk-base:$rootProject.ext.googleVRVersion"
+    implementation files("libs/sdk-base-${rootProject.ext.googleVRVersion}.aar")
     implementation "com.google.ar:core:1.6.0"
+    implementation "com.google.protobuf.nano:protobuf-javanano:3.1.0"
     implementation "com.google.dagger:dagger:$rootProject.ext.daggerVersion"
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'com.google.code.findbugs:jsr305:3.0.2'

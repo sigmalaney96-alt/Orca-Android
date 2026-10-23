@@ -25,7 +25,7 @@
             android:maxWidth="130dp"
             android:scaleType="centerInside"
             tools:ignore="ContentDescription"
-            android:src="@drawable/fre_product_logo" />
+            android:src="@drawable/orca_launcher_icon" />
 
         <LinearLayout
             android:layout_width="wrap_content"

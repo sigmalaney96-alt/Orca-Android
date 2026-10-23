@@ -89,7 +89,6 @@ public class NonPresentingGvrContext {
     }
 
     public void onDisplayConfigurationChanged() {
-        mGvrApi.refreshDisplayMetrics();
         if (mNativeGvrDevice != 0) nativeOnDisplayConfigurationChanged(mNativeGvrDevice);
     }
 

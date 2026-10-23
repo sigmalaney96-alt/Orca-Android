@@ -4,5 +4,5 @@
      found in the LICENSE file. -->
 
 <resources>
-    <drawable name="ic_launcher">@mipmap/app_icon</drawable>
+    <drawable name="ic_launcher">@drawable/orca_launcher_icon</drawable>
 </resources>

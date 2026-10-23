@@ -1,15 +1,34 @@
 ![Logo](screenshots/app_icon.png?raw=true "Logo")
 
-# Chromium Android
+# Orca for Android
 
 [![Build Status](https://travis-ci.org/kuoruan/Chromium-Android.svg)](https://travis-ci.org/kuoruan/Chromium-Android) [![Release Version](https://img.shields.io/github/release/kuoruan/Chromium-Android.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/kuoruan/Chromium-Android/latest/total.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest)
 
 ### Introduction
 
-- This is the source code of Chromium Android app.
+- Orca is a browser built on the Chromium Android source in this repository.
 - All files are from (or generate from) the [Chromium project](https://chromium.googlesource.com/ "Chromium source repo").
 - This repository helps you review the most popular browser app on Android.
 - You can also build your own Android browser with this repository.
+
+The app uses the existing native Chromium browser UI and rendering engine. The current Orca
+changes set the application identity to `com.orca.browser`, use the Abyss palette for native
+browser surfaces, and add a branded hero to Chromium's native New Tab page while retaining its
+search box and site tiles. Tabs, bookmarks, history, and downloads remain native Chromium
+features. The project remains on Chromium 73, Android Gradle Plugin 3.3.2, Gradle 4.10.1, and
+target SDK 28. The newer Orca settings pages, Ecosia default search, tracker blocking, site
+permission manager, and Bit-Swapper game are not implemented.
+
+The `Build Orca APK` GitHub Actions workflow builds a debug APK and a release APK. It publishes the
+release as `Orca-release-apk` when signing secrets are configured, or `Orca-release-apk-unsigned`
+otherwise. To enable signing, add the following repository Actions secrets using the owner's
+private release keystore: `ORCA_RELEASE_KEYSTORE_BASE64` (base64-encoded keystore),
+`ORCA_RELEASE_KEYSTORE_PASSWORD`, `ORCA_RELEASE_KEY_ALIAS`, and `ORCA_RELEASE_KEY_PASSWORD`.
+Never commit or share the keystore or its passwords. The project remains on target SDK 28 and only
+packages 32-bit ARM native libraries, so it is not Play Store-ready and may not run on 64-bit-only
+devices. The build fetches the archived Google VR SDK AAR from its official upstream repository at
+a pinned commit and verifies its SHA-256 checksum; local builds must place the same AAR under
+`app/libs/`.
 
 ### Start Working
 
