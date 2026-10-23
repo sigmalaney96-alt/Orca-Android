@@ -2,6 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'idea'
 apply from: "$rootDir/gradle/android-lint.gradle"
 
+def orcaReleaseSigning = [
+        storeFile: System.getenv("ORCA_RELEASE_STORE_FILE"),
+        storePassword: System.getenv("ORCA_RELEASE_KEYSTORE_PASSWORD"),
+        keyAlias: System.getenv("ORCA_RELEASE_KEY_ALIAS"),
+        keyPassword: System.getenv("ORCA_RELEASE_KEY_PASSWORD"),
+]
+def hasOrcaReleaseSigning = orcaReleaseSigning.values().every {
+    it != null && !it.isEmpty()
+}
+
 android {
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -24,10 +34,23 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    signingConfigs {
+        if (hasOrcaReleaseSigning) {
+            release {
+                storeFile file(orcaReleaseSigning.storeFile)
+                storePassword orcaReleaseSigning.storePassword
+                keyAlias orcaReleaseSigning.keyAlias
+                keyPassword orcaReleaseSigning.keyPassword
+            }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            if (hasOrcaReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
         }
     }
     dexOptions {

@@ -11,6 +11,13 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-22.04
+    env:
+      ORCA_RELEASE_STORE_FILE: ${{ runner.temp }}/orca-release.jks
+      ORCA_RELEASE_KEYSTORE_BASE64: ${{ secrets.ORCA_RELEASE_KEYSTORE_BASE64 }}
+      ORCA_RELEASE_KEYSTORE_PASSWORD: ${{ secrets.ORCA_RELEASE_KEYSTORE_PASSWORD }}
+      ORCA_RELEASE_KEY_ALIAS: ${{ secrets.ORCA_RELEASE_KEY_ALIAS }}
+      ORCA_RELEASE_KEY_PASSWORD: ${{ secrets.ORCA_RELEASE_KEY_PASSWORD }}
+      ORCA_RELEASE_SIGNING_CONFIGURED: 'false'
     steps:
       - uses: actions/checkout@v4
 
@@ -39,6 +46,14 @@ jobs:
           distribution: temurin
           java-version: '8'
 
+      - name: Prepare private release signing key
+        if: ${{ secrets.ORCA_RELEASE_KEYSTORE_BASE64 != '' && secrets.ORCA_RELEASE_KEYSTORE_PASSWORD != '' && secrets.ORCA_RELEASE_KEY_ALIAS != '' && secrets.ORCA_RELEASE_KEY_PASSWORD != '' }}
+        run: |
+          printf '%s' "$ORCA_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$ORCA_RELEASE_STORE_FILE"
+          test -s "$ORCA_RELEASE_STORE_FILE"
+          chmod 600 "$ORCA_RELEASE_STORE_FILE"
+          echo "ORCA_RELEASE_SIGNING_CONFIGURED=true" >> "$GITHUB_ENV"
+
       - name: Build debug and release APKs
         run: ./gradlew :app:assembleDebug :app:assembleRelease -PdisablePreDex --stacktrace
 
@@ -49,7 +64,16 @@ jobs:
           path: app/build/outputs/apk/debug/*.apk
           if-no-files-found: error
 
+      - name: Upload signed release APK
+        if: env.ORCA_RELEASE_SIGNING_CONFIGURED == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: Orca-release-apk
+          path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
+
       - name: Upload unsigned release APK
+        if: env.ORCA_RELEASE_SIGNING_CONFIGURED != 'true'
         uses: actions/upload-artifact@v4
         with:
           name: Orca-release-apk-unsigned
