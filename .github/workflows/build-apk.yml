@@ -12,7 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-22.04
     env:
-      ORCA_RELEASE_STORE_FILE: ${{ runner.temp }}/orca-release.jks
       ORCA_RELEASE_KEYSTORE_BASE64: ${{ secrets.ORCA_RELEASE_KEYSTORE_BASE64 }}
       ORCA_RELEASE_KEYSTORE_PASSWORD: ${{ secrets.ORCA_RELEASE_KEYSTORE_PASSWORD }}
       ORCA_RELEASE_KEY_ALIAS: ${{ secrets.ORCA_RELEASE_KEY_ALIAS }}
@@ -49,12 +48,14 @@ jobs:
       - name: Prepare private release signing key
         if: env.ORCA_RELEASE_KEYSTORE_BASE64 != '' && env.ORCA_RELEASE_KEYSTORE_PASSWORD != '' && env.ORCA_RELEASE_KEY_ALIAS != '' && env.ORCA_RELEASE_KEY_PASSWORD != ''
         run: |
-          printf '%s' "$ORCA_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$ORCA_RELEASE_STORE_FILE"
-          test -s "$ORCA_RELEASE_STORE_FILE"
-          keytool -list -keystore "$ORCA_RELEASE_STORE_FILE" \
+          store_file="$RUNNER_TEMP/orca-release.jks"
+          echo "ORCA_RELEASE_STORE_FILE=$store_file" >> "$GITHUB_ENV"
+          printf '%s' "$ORCA_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$store_file"
+          test -s "$store_file"
+          keytool -list -keystore "$store_file" \
             -storepass "$ORCA_RELEASE_KEYSTORE_PASSWORD" \
             -alias "$ORCA_RELEASE_KEY_ALIAS" > /dev/null
-          chmod 600 "$ORCA_RELEASE_STORE_FILE"
+          chmod 600 "$store_file"
           echo "ORCA_RELEASE_SIGNING_CONFIGURED=true" >> "$GITHUB_ENV"
 
       - name: Build debug and release APKs
