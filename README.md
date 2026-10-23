@@ -20,7 +20,9 @@ target SDK 28. The newer Orca settings pages, Ecosia default search, tracker blo
 permission manager, and Bit-Swapper game are not implemented.
 
 The `Build Orca APK` GitHub Actions workflow builds a debug APK and publishes it as the
-`Orca-debug-apk` artifact when the workflow completes successfully.
+`Orca-debug-apk` artifact when the workflow completes successfully. The build fetches the
+archived Google VR SDK AAR from its official upstream repository at a pinned commit and verifies
+its SHA-256 checksum; local builds must place the same AAR under `app/libs/`.
 
 ### Start Working
 
