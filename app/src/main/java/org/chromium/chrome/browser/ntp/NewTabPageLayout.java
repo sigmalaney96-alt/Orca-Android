@@ -81,6 +81,7 @@ public class NewTabPageLayout extends LinearLayout implements TileGroup.Observer
     private View mMiddleSpacer; // Spacer between toolbar and Most Likely.
 
     private LogoView mSearchProviderLogoView;
+    private View mOrcaHeroView;
     private View mSearchBoxView;
     private ViewGroup mSiteSectionView;
     private SiteSectionViewHolder mSiteSectionViewHolder;
@@ -248,6 +249,7 @@ public class NewTabPageLayout extends LinearLayout implements TileGroup.Observer
         }
 
         mSearchProviderLogoView = findViewById(R.id.search_provider_logo);
+        mOrcaHeroView = findViewById(R.id.orca_ntp_hero);
         mLogoDelegate = new LogoDelegateImpl(
                 mManager.getNavigationDelegate(), mSearchProviderLogoView, profile);
 
@@ -574,6 +576,8 @@ public class NewTabPageLayout extends LinearLayout implements TileGroup.Observer
                 child.setVisibility(visibility);
             }
         }
+        mSearchProviderLogoView.setVisibility(View.GONE);
+        mOrcaHeroView.setVisibility(View.VISIBLE);
 
         updateTileGridPlaceholderVisibility();
 

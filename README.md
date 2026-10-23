@@ -13,7 +13,8 @@
 
 The app uses the existing native Chromium browser UI and rendering engine. The current Orca
 changes set the application identity to `com.orca.browser`, use the Abyss palette for native
-browser surfaces, and retain the existing native New Tab, tabs, bookmarks, history, and downloads
+browser surfaces, and add a branded hero to Chromium's native New Tab page while retaining its
+search box and site tiles. Tabs, bookmarks, history, and downloads remain native Chromium
 features. The project remains on Chromium 73, Android Gradle Plugin 3.3.2, Gradle 4.10.1, and
 target SDK 28. The newer Orca settings pages, Ecosia default search, tracker blocking, site
 permission manager, and Bit-Swapper game are not implemented.

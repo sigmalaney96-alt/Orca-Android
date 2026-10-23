@@ -8,4 +8,7 @@
     <string name="app_name" translatable="false">Orca</string>
     <string name="bookmark_widget_title" translatable="false">Orca bookmarks</string>
     <string name="search_widget_title" translatable="false">Orca search</string>
+    <string name="orca_ntp_eyebrow" translatable="false">ORCA BROWSER</string>
+    <string name="orca_ntp_title" translatable="false">Make a little wave.</string>
+    <string name="orca_ntp_subtitle" translatable="false">A calmer place to explore the web.</string>
 </resources>
