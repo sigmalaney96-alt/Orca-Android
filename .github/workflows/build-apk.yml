@@ -51,6 +51,9 @@ jobs:
         run: |
           printf '%s' "$ORCA_RELEASE_KEYSTORE_BASE64" | base64 --decode > "$ORCA_RELEASE_STORE_FILE"
           test -s "$ORCA_RELEASE_STORE_FILE"
+          keytool -list -keystore "$ORCA_RELEASE_STORE_FILE" \
+            -storepass "$ORCA_RELEASE_KEYSTORE_PASSWORD" \
+            -alias "$ORCA_RELEASE_KEY_ALIAS" > /dev/null
           chmod 600 "$ORCA_RELEASE_STORE_FILE"
           echo "ORCA_RELEASE_SIGNING_CONFIGURED=true" >> "$GITHUB_ENV"
 
