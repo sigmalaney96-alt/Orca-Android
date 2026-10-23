@@ -5,7 +5,7 @@
 
 <resources>
     <!--
-    TODO(crbuc.com/806868): Use Chrome approved colors and remove this.
+    TODO(crbuc.com/806868): Use Orca approved colors and remove this.
 
     Please see src/ui/android/java/res/values/colors.xml for the shared common colors.
     -->
