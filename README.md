@@ -19,10 +19,14 @@ features. The project remains on Chromium 73, Android Gradle Plugin 3.3.2, Gradl
 target SDK 28. The newer Orca settings pages, Ecosia default search, tracker blocking, site
 permission manager, and Bit-Swapper game are not implemented.
 
-The `Build Orca APK` GitHub Actions workflow builds a debug APK and publishes it as the
-`Orca-debug-apk` artifact when the workflow completes successfully. The build fetches the
-archived Google VR SDK AAR from its official upstream repository at a pinned commit and verifies
-its SHA-256 checksum; local builds must place the same AAR under `app/libs/`.
+The `Build Orca APK` GitHub Actions workflow builds debug and release APKs and publishes them as
+`Orca-debug-apk` and `Orca-release-apk-unsigned`. The release artifact is unsigned because no
+production signing key is configured; it is not ready for Play Store distribution or installation
+as a production update until signed with the owner's key. The project remains on target SDK 28 and
+only packages 32-bit ARM native libraries, so it is not Play Store-ready and may not run on
+64-bit-only devices. The build fetches the archived Google VR SDK AAR from its official upstream
+repository at a pinned commit and verifies its SHA-256 checksum; local builds must place the same
+AAR under `app/libs/`.
 
 ### Start Working
 

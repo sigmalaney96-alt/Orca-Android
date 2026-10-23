@@ -12,7 +12,8 @@ import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.res.Resources;
-import android.graphics.BitmapFactory;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
 import android.nfc.NfcAdapter;
 import android.os.Build;
 import android.os.Bundle;
@@ -118,8 +119,14 @@ public class Preferences extends AppCompatActivity implements OnPreferenceStartF
 
 
         Resources res = getResources();
+        VectorDrawableCompat appIcon =
+                VectorDrawableCompat.create(res, R.drawable.orca_launcher_icon, getTheme());
+        Bitmap appIconBitmap = Bitmap.createBitmap(appIcon.getIntrinsicWidth(),
+                appIcon.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+        appIcon.setBounds(0, 0, appIconBitmap.getWidth(), appIconBitmap.getHeight());
+        appIcon.draw(new Canvas(appIconBitmap));
         ApiCompatibilityUtils.setTaskDescription(this, res.getString(R.string.app_name),
-                BitmapFactory.decodeResource(res, R.mipmap.app_icon),
+                appIconBitmap,
                 ApiCompatibilityUtils.getColor(res, R.color.default_primary_color));
     }
 
