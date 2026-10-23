@@ -34,8 +34,8 @@
 <string name="autofill_from_google_account_long">"From Google Pay"</string>
 <string name="autofill_assistant_give_up">"I cannot help anymore, please continue on your own."</string>
 <string name="autofill_assistant_payment_info_confirm">"Continue"</string>
-<string name="autofill_assistant_first_run_accessibility">"Google Assistant in Chrome first run screen is shown"</string>
-<string name="autofill_assistant_available_accessibility">"Google Assistant in Chrome is available near bottom of the screen"</string>
+<string name="autofill_assistant_first_run_accessibility">"Google Assistant in Orca first run screen is shown"</string>
+<string name="autofill_assistant_available_accessibility">"Google Assistant in Orca is available near bottom of the screen"</string>
 <string name="http_post_warning_title">"Confirm Form Resubmission"</string>
 <string name="http_post_warning">"The page that you\'re looking for used information that you entered. Returning to that page might cause any action you took to be repeated. Do you want to continue?"</string>
 <string name="http_post_warning_resend">"Continue"</string>
@@ -57,7 +57,7 @@
 <string name="new_tab_otr_title">"You’ve gone incognito"</string>
 <string name="new_tab_private_title">"You’ve gone private"</string>
 <string name="new_tab_otr_subtitle">"Now you can browse privately, and other people who use this device won’t see your activity. However, downloads and bookmarks will be saved."</string>
-<string name="new_tab_otr_not_saved">"Chrome &lt;em&gt;won’t save&lt;/em&gt; the following information:
+<string name="new_tab_otr_not_saved">"Orca &lt;em&gt;won’t save&lt;/em&gt; the following information:
         &lt;ul&gt;
           &lt;li&gt;Your browsing history
           &lt;li&gt;Cookies and site data
@@ -123,8 +123,8 @@
 <string name="payments_debit_prepaid_cards_are_accepted_label">"Debit and prepaid cards are accepted."</string>
 <string name="payments_error_message">"There was an error processing your order. Please try again."</string>
 <string name="payments_card_and_address_settings">"You can manage cards and addresses in BEGIN_LINKSettingsEND_LINK."</string>
-<string name="payments_card_and_address_settings_signed_in">"Cards and addresses are from Chrome and your Google Account (%1$s). You can manage them in BEGIN_LINKSettingsEND_LINK."</string>
-<string name="payments_card_and_address_settings_signed_out">"Cards and addresses are from Chrome. You can manage them in BEGIN_LINKSettingsEND_LINK."</string>
+<string name="payments_card_and_address_settings_signed_in">"Cards and addresses are from Orca and your Google Account (%1$s). You can manage them in BEGIN_LINKSettingsEND_LINK."</string>
+<string name="payments_card_and_address_settings_signed_out">"Cards and addresses are from Orca. You can manage them in BEGIN_LINKSettingsEND_LINK."</string>
 <string name="settings_can_make_payment_toggle_label">"Allow sites to check if you have payment methods saved"</string>
 <string name="payments_required_field_message">"* Field is required"</string>
 <string name="payments_phone_invalid_validation_message">"Enter a valid phone number"</string>

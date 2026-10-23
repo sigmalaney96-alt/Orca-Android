@@ -67,13 +67,13 @@ If this setting is disabled, Autofill will never suggest, or fill credit card in
 
 If this setting is enabled or has no value, the user will be able to control Autofill for credit cards in the UI.</string>
   <string name="BrowserSigninTitle">Browser sign in settings</string>
-  <string name="BrowserSigninDesc">This policy controls the sign-in behavior of the browser. It allows you to specify if the user can sign in to Orca with their account and use account related services like Chrome sync.
+  <string name="BrowserSigninDesc">This policy controls the sign-in behavior of the browser. It allows you to specify if the user can sign in to Orca with their account and use account related services like Orca sync.
 
-If the policy is set to \\&quot;Disable browser sign-in\\&quot; then the user can not sign in to the browser and use account based services. In this case browser level features like Chrome sync can not be used and will be unavailable. If the user was signed in and the policy is set \\&quot;Disabled\\&quot; they will be signed out the next time they run Chrome but their local profile data like bookmarks, passwords etc. will stay preserved. The user will still be able to sign into and use Google web services like Gmail.
+If the policy is set to \\&quot;Disable browser sign-in\\&quot; then the user can not sign in to the browser and use account based services. In this case browser level features like Orca sync can not be used and will be unavailable. If the user was signed in and the policy is set \\&quot;Disabled\\&quot; they will be signed out the next time they run Orca but their local profile data like bookmarks, passwords etc. will stay preserved. The user will still be able to sign into and use Google web services like Gmail.
 
-If the policy is set to \\&quot;Enable browser sign-in,\\&quot; then the user is allowed to sign in to the browser and is automatically signed in to the browser when signed in to Google web services like Gmail. Being signed in to the browser means the user\'s account information will be kept by the browser. However, it does not mean that Chrome sync will be turned on per default; the user must separately opt-in to use this feature. Enabling this policy will prevent the user from turning off the setting that allows browser sign-in. To control the availability of Chrome sync, use the \\&quot;SyncDisabled\\&quot; policy.
+If the policy is set to \\&quot;Enable browser sign-in,\\&quot; then the user is allowed to sign in to the browser and is automatically signed in to the browser when signed in to Google web services like Gmail. Being signed in to the browser means the user\'s account information will be kept by the browser. However, it does not mean that Orca sync will be turned on per default; the user must separately opt-in to use this feature. Enabling this policy will prevent the user from turning off the setting that allows browser sign-in. To control the availability of Orca sync, use the \\&quot;SyncDisabled\\&quot; policy.
 
-If the policy is set to \\&quot;Force browser sign-in\\&quot; the user is presented with an account selection dialog and has to choose and sign in to an account to use the browser. This ensures that for managed accounts the policies associated with the account are applied and enforced. By default this turns on Chrome sync for the account, except for the case when sync was disabled by the domain admin or via the \\&quot;SyncDisabled\\&quot; policy. The default value of BrowserGuestModeEnabled will be set to false. Note that existing unsigned profiles will be locked and inaccessible after enabling this policy. For more information, see help center article: https://support.google.com/chrome/a/answer/7572556.
+If the policy is set to \\&quot;Force browser sign-in\\&quot; the user is presented with an account selection dialog and has to choose and sign in to an account to use the browser. This ensures that for managed accounts the policies associated with the account are applied and enforced. By default this turns on Orca sync for the account, except for the case when sync was disabled by the domain admin or via the \\&quot;SyncDisabled\\&quot; policy. The default value of BrowserGuestModeEnabled will be set to false. Note that existing unsigned profiles will be locked and inaccessible after enabling this policy. For more information, see help center article: https://support.google.com/chrome/a/answer/7572556.
 
 If this policy is not set then the user can decide if they want to enable the browser sign in option and use it as they see fit.</string>
   <string-array name="BrowserSigninEntries">
@@ -427,7 +427,7 @@ If the policy is not configured, the user will be able to change this setting.
 
 NOTE: On Android, Site Isolation is experimental. Support will improve over time, but currently it may cause performance problems.
 
-NOTE: This policy applies only to Chrome on Android running on devices with strictly more than 1GB of RAM. To apply the policy on non-Android platforms, use IsolateOrigins.
+NOTE: This policy applies only to Orca on Android running on devices with strictly more than 1GB of RAM. To apply the policy on non-Android platforms, use IsolateOrigins.
 </string>
   <string name="JavaScriptAllowedForUrlsTitle">Allow JavaScript on these sites</string>
   <string name="JavaScriptAllowedForUrlsDesc">Allows you to set a list of url patterns that specify sites which are allowed to run JavaScript.
@@ -588,7 +588,7 @@ Use the wildcard character \'*\' to match zero or more arbitrary characters. The
 
 If this policy is not set, all Google accounts on the device will be visible in Orca.</string>
   <string name="SSLErrorOverrideAllowedTitle">Allow proceeding from the SSL warning page</string>
-  <string name="SSLErrorOverrideAllowedDesc">Chrome shows a warning page when users navigate to sites that have SSL errors. By default or when this policy is set to true, users are allowed to click through these warning pages.
+  <string name="SSLErrorOverrideAllowedDesc">Orca shows a warning page when users navigate to sites that have SSL errors. By default or when this policy is set to true, users are allowed to click through these warning pages.
 Setting this policy to false disallows users to click through any warning page.</string>
   <string name="SSLVersionMaxTitle">Maximum SSL version enabled</string>
   <string name="SSLVersionMaxDesc">Warning: The max TLS version policy will be entirely removed from Orca around version 75 (around June 2019).
@@ -657,7 +657,7 @@ If the policy is not configured, the user will be able to change this setting.
 
 NOTE: On Android, Site Isolation is experimental. Support will improve over time, but currently it may cause performance problems.
 
-NOTE: This policy applies only to Chrome on Android running on devices with strictly more than 1GB of RAM. To apply the policy on non-Android platforms, use SitePerProcess.
+NOTE: This policy applies only to Orca on Android running on devices with strictly more than 1GB of RAM. To apply the policy on non-Android platforms, use SitePerProcess.
 </string>
   <string name="TranslateEnabledTitle">Enable Translate</string>
   <string name="TranslateEnabledDesc">Enables the integrated Google Translate service on Orca.

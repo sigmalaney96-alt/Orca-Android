@@ -34,8 +34,8 @@
 <string name="autofill_from_google_account_long">"来自 Google Pay"</string>
 <string name="autofill_assistant_give_up">"我已无法再提供帮助，接下来请自行操作。"</string>
 <string name="autofill_assistant_payment_info_confirm">"继续"</string>
-<string name="autofill_assistant_first_run_accessibility">"显示 Chrome 中的 Google 助理的首次运行屏幕"</string>
-<string name="autofill_assistant_available_accessibility">"Chrome 中的 Google 助理位于屏幕底部附近"</string>
+<string name="autofill_assistant_first_run_accessibility">"显示 Orca 中的 Google 助理的首次运行屏幕"</string>
+<string name="autofill_assistant_available_accessibility">"Orca 中的 Google 助理位于屏幕底部附近"</string>
 <string name="http_post_warning_title">"确认重新提交表单"</string>
 <string name="http_post_warning">"您所查找的网页要使用已输入的信息。返回此页可能需要重复已进行的所有操作。是否要继续操作？"</string>
 <string name="http_post_warning_resend">"继续"</string>
@@ -57,7 +57,7 @@
 <string name="new_tab_otr_title">"您已进入无痕模式"</string>
 <string name="new_tab_private_title">"您已启用无痕模式"</string>
 <string name="new_tab_otr_subtitle">"现在，您便可进行私密浏览了。共用此设备的其他用户将不会看到您的活动，但您下载的内容和添加的书签仍会保存在设备上。"</string>
-<string name="new_tab_otr_not_saved">"Chrome &lt;em&gt;不会保存&lt;/em&gt;以下信息：
+<string name="new_tab_otr_not_saved">"Orca &lt;em&gt;不会保存&lt;/em&gt;以下信息：
         &lt;ul&gt;
           &lt;li&gt;您的浏览记录
           &lt;li&gt;Cookie 和网站数据
@@ -124,8 +124,8 @@
 <string name="payments_debit_prepaid_cards_are_accepted_label">"接受借记卡和预付卡。"</string>
 <string name="payments_error_message">"处理您的订单时出错。请重试。"</string>
 <string name="payments_card_and_address_settings">"您可以在BEGIN_LINK设置END_LINK中管理信用卡和地址信息。"</string>
-<string name="payments_card_and_address_settings_signed_in">"信用卡选项和地址选项均来自 Chrome 和您的 Google 帐号 (%1$s)。您可在BEGIN_LINK设置END_LINK中管理这些选项。"</string>
-<string name="payments_card_and_address_settings_signed_out">"信用卡选项和地址选项均来自 Chrome。您可在BEGIN_LINK设置END_LINK中管理这些选项。"</string>
+<string name="payments_card_and_address_settings_signed_in">"信用卡选项和地址选项均来自 Orca 和您的 Google 帐号 (%1$s)。您可在BEGIN_LINK设置END_LINK中管理这些选项。"</string>
+<string name="payments_card_and_address_settings_signed_out">"信用卡选项和地址选项均来自 Orca。您可在BEGIN_LINK设置END_LINK中管理这些选项。"</string>
 <string name="settings_can_make_payment_toggle_label">"允许网站检查您是否已保存付款方式"</string>
 <string name="payments_required_field_message">"标有“*”的字段均是必填字段"</string>
 <string name="payments_phone_invalid_validation_message">"请输入有效的电话号码"</string>
