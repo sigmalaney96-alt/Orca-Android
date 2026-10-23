@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_primary_color">#0B1018</color>
+    <color name="default_text_color">#EEF5FF</color>
+    <color name="default_text_color_secondary">#92A5BC</color>
+    <color name="modern_blue_300">#79D0EF</color>
+    <color name="modern_blue_600">#44B4E5</color>
+    <color name="modern_grey_50">#111925</color>
+    <color name="modern_grey_100">#172332</color>
+    <color name="modern_grey_200">#1C2A3B</color>
+    <color name="modern_grey_700">#92A5BC</color>
+    <color name="modern_grey_800">#EEF5FF</color>
+    <color name="modern_grey_900">#EEF5FF</color>
+    <color name="ntp_bg">#0B1018</color>
+    <color name="modern_primary_color">#111925</color>
+</resources>

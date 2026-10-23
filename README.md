@@ -1,15 +1,25 @@
 ![Logo](screenshots/app_icon.png?raw=true "Logo")
 
-# Chromium Android
+# Orca for Android
 
 [![Build Status](https://travis-ci.org/kuoruan/Chromium-Android.svg)](https://travis-ci.org/kuoruan/Chromium-Android) [![Release Version](https://img.shields.io/github/release/kuoruan/Chromium-Android.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/kuoruan/Chromium-Android/latest/total.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest)
 
 ### Introduction
 
-- This is the source code of Chromium Android app.
+- Orca is a browser built on the Chromium Android source in this repository.
 - All files are from (or generate from) the [Chromium project](https://chromium.googlesource.com/ "Chromium source repo").
 - This repository helps you review the most popular browser app on Android.
 - You can also build your own Android browser with this repository.
+
+The app uses the existing native Chromium browser UI and rendering engine. The current Orca
+changes set the application identity to `com.orca.browser`, use the Abyss palette for native
+browser surfaces, and retain the existing native New Tab, tabs, bookmarks, history, and downloads
+features. The project remains on Chromium 73, Android Gradle Plugin 3.3.2, Gradle 4.10.1, and
+target SDK 28. The newer Orca settings pages, Ecosia default search, tracker blocking, site
+permission manager, and Bit-Swapper game are not implemented.
+
+The `Build Orca APK` GitHub Actions workflow builds a debug APK and publishes it as the
+`Orca-debug-apk` artifact when the workflow completes successfully.
 
 ### Start Working
 
