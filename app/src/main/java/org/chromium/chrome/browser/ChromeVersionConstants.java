@@ -8,5 +8,5 @@ import org.chromium.components.version_info.VersionConstants;
 
 // Constants specific to Chrome. Common constants are in VersionConstants.
 class ChromeVersionConstants extends VersionConstants {
-    static final String PRODUCT_NAME = "Chromium";
+    static final String PRODUCT_NAME = "Orca";
 }

@@ -19,7 +19,7 @@
 <string name="autofill_card_unmask_prompt_error_try_again_expiration_month">"請檢查信用卡到期月份，然後再試一次"</string>
 <string name="autofill_card_unmask_prompt_error_try_again_expiration_year">"請檢查信用卡到期年份，然後再試一次"</string>
 <string name="autofill_card_unmask_prompt_storage_checkbox">"在這個裝置上保留這張信用卡的複本"</string>
-<string name="autofill_card_unmask_prompt_storage_tooltip">"勾選後，Chromium 會將您的信用卡資料儲存在這個裝置上，以加快表單填寫速度。"</string>
+<string name="autofill_card_unmask_prompt_storage_tooltip">"勾選後，Orca 會將您的信用卡資料儲存在這個裝置上，以加快表單填寫速度。"</string>
 <string name="autofill_card_unmask_verification_in_progress">"正在驗證信用卡…"</string>
 <string name="autofill_card_unmask_verification_success">"您的信用卡已通過驗證"</string>
 <string name="autofill_card_unmask_expiration_date_separator">"/"</string>
@@ -51,7 +51,7 @@
 <string name="sad_tab_reload_try">"嘗試按照下列提示操作："</string>
 <string name="sad_tab_reload_incognito">"在新的無痕式分頁中開啟網頁"</string>
 <string name="sad_tab_reload_private">"在新的私密分頁中開啟網頁"</string>
-<string name="sad_tab_reload_restart_browser">"重新啟動 Chromium"</string>
+<string name="sad_tab_reload_restart_browser">"重新啟動 Orca"</string>
 <string name="sad_tab_reload_restart_device">"重新啟動裝置"</string>
 <string name="sad_tab_reload_learn_more">"瞭解詳情"</string>
 <string name="new_tab_otr_title">"你已進入無痕模式"</string>

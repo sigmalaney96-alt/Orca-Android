@@ -1,12 +1,10 @@
 ![Logo](screenshots/app_icon.png?raw=true "Logo")
 
-# Chromium Android
-
-[![Build Status](https://travis-ci.org/kuoruan/Chromium-Android.svg)](https://travis-ci.org/kuoruan/Chromium-Android) [![Release Version](https://img.shields.io/github/release/kuoruan/Chromium-Android.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest) [![Latest Release Download](https://img.shields.io/github/downloads/kuoruan/Chromium-Android/latest/total.svg)](https://github.com/kuoruan/Chromium-Android/releases/latest)
+# Orca for Android
 
 ### Introduction
 
-- This is the source code of Chromium Android app.
+- Orca is an Android browser built on the Chromium project source (rebranded).
 - All files are from (or generate from) the [Chromium project](https://chromium.googlesource.com/ "Chromium source repo").
 - This repository helps you review the most popular browser app on Android.
 - You can also build your own Android browser with this repository.
@@ -24,6 +22,10 @@ Notice: If you have something wrong with build, try close instant run in Android
 ![Welcome](screenshots/welcome.png?raw=true "Welcome") ![App Home](screenshots/app_home.png?raw=true "App Home")
 
 ![Html5 Score](screenshots/html5_score.png?raw=true "Html5 Score") ![Video Play](screenshots/video_play.png?raw=true "Video Play")
+
+### Building the APK
+
+The GitHub Actions workflow `.github/workflows/build-apk.yml` builds a debug APK and uploads it as the `Orca-debug-apk` artifact.
 
 ### Source Update
 

@@ -3,7 +3,7 @@
 IT IS GENERATED FROM policy_templates.json.-->
 <resources>
   <string name="AllowedDomainsForAppsTitle">Define domains allowed to access G Suite</string>
-  <string name="AllowedDomainsForAppsDesc">Enables Chromium\'s restricted log in feature in G Suite and prevents users from changing this setting.
+  <string name="AllowedDomainsForAppsDesc">Enables Orca\'s restricted log in feature in G Suite and prevents users from changing this setting.
 
 If you define this setting, the user will only be able to access Google
 Apps using accounts from the specified domains (note that to allow
@@ -23,13 +23,13 @@ https://support.google.com/a/answer/1668854.
 
 Users cannot change or override this setting.</string>
   <string name="AlternateErrorPagesEnabledTitle">Enable alternate error pages</string>
-  <string name="AlternateErrorPagesEnabledDesc">Enables the use of alternate error pages that are built into Chromium (such as \'page not found\') and prevents users from changing this setting.
+  <string name="AlternateErrorPagesEnabledDesc">Enables the use of alternate error pages that are built into Orca (such as \'page not found\') and prevents users from changing this setting.
 
 If you enable this setting, alternate error pages are used.
 
 If you disable this setting, alternate error pages are never used.
 
-If you enable or disable this setting, users cannot change or override this setting in Chromium.
+If you enable or disable this setting, users cannot change or override this setting in Orca.
 
 If this policy is left not set, this will be enabled but the user will be able to change it.</string>
   <string name="AuthAndroidNegotiateAccountTypeTitle">Account type for HTTP Negotiate authentication</string>
@@ -37,37 +37,37 @@ If this policy is left not set, this will be enabled but the user will be able t
 
 If no setting is provided, HTTP Negotiate authentication is disabled on Android.</string>
   <string name="AuthNegotiateDelegateWhitelistTitle">Kerberos delegation server whitelist</string>
-  <string name="AuthNegotiateDelegateWhitelistDesc">Servers that Chromium may delegate to.
+  <string name="AuthNegotiateDelegateWhitelistDesc">Servers that Orca may delegate to.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
 
-If you leave this policy not set Chromium will not delegate user credentials even if a server is detected as Intranet.</string>
+If you leave this policy not set Orca will not delegate user credentials even if a server is detected as Intranet.</string>
   <string name="AuthSchemesTitle">Supported authentication schemes</string>
-  <string name="AuthSchemesDesc">Specifies which HTTP authentication schemes are supported by Chromium.
+  <string name="AuthSchemesDesc">Specifies which HTTP authentication schemes are supported by Orca.
 
 Possible values are \'basic\', \'digest\', \'ntlm\' and \'negotiate\'. Separate multiple values with commas.
 
 If this policy is left not set, all four schemes will be used.</string>
   <string name="AuthServerWhitelistTitle">Authentication server whitelist</string>
-  <string name="AuthServerWhitelistDesc">Specifies which servers should be whitelisted for integrated authentication. Integrated authentication is only enabled when Chromium receives an authentication challenge from a proxy or from a server which is in this permitted list.
+  <string name="AuthServerWhitelistDesc">Specifies which servers should be whitelisted for integrated authentication. Integrated authentication is only enabled when Orca receives an authentication challenge from a proxy or from a server which is in this permitted list.
 
 Separate multiple server names with commas. Wildcards (*) are allowed.
 
-If you leave this policy not set Chromium will try to detect if a server is on the Intranet and only then will it respond to IWA requests.  If a server is detected as Internet then IWA requests from it will be ignored by Chromium.</string>
+If you leave this policy not set Orca will try to detect if a server is on the Intranet and only then will it respond to IWA requests.  If a server is detected as Internet then IWA requests from it will be ignored by Orca.</string>
   <string name="AutofillAddressEnabledTitle">Enable AutoFill for addresses</string>
-  <string name="AutofillAddressEnabledDesc">Enables Chromium\'s AutoFill feature and allows users to auto complete address information in web forms using previously stored information.
+  <string name="AutofillAddressEnabledDesc">Enables Orca\'s AutoFill feature and allows users to auto complete address information in web forms using previously stored information.
 
 If this setting is disabled, Autofill will never suggest, or fill address information, nor will it save additional address information that the user might submit while browsing the web.
 
 If this setting is enabled or has no value, the user will be able to control Autofill for addresses in the UI.</string>
   <string name="AutofillCreditCardEnabledTitle">Enable AutoFill for credit cards</string>
-  <string name="AutofillCreditCardEnabledDesc">Enables Chromium\'s AutoFill feature and allows users to auto complete credit card information in web forms using previously stored information.
+  <string name="AutofillCreditCardEnabledDesc">Enables Orca\'s AutoFill feature and allows users to auto complete credit card information in web forms using previously stored information.
 
 If this setting is disabled, Autofill will never suggest, or fill credit card information, nor will it save additional credit card information that the user might submit while browsing the web.
 
 If this setting is enabled or has no value, the user will be able to control Autofill for credit cards in the UI.</string>
   <string name="BrowserSigninTitle">Browser sign in settings</string>
-  <string name="BrowserSigninDesc">This policy controls the sign-in behavior of the browser. It allows you to specify if the user can sign in to Chromium with their account and use account related services like Chrome sync.
+  <string name="BrowserSigninDesc">This policy controls the sign-in behavior of the browser. It allows you to specify if the user can sign in to Orca with their account and use account related services like Chrome sync.
 
 If the policy is set to \\&quot;Disable browser sign-in\\&quot; then the user can not sign in to the browser and use account based services. In this case browser level features like Chrome sync can not be used and will be unavailable. If the user was signed in and the policy is set \\&quot;Disabled\\&quot; they will be signed out the next time they run Chrome but their local profile data like bookmarks, passwords etc. will stay preserved. The user will still be able to sign into and use Google web services like Gmail.
 
@@ -104,7 +104,7 @@ If this policy is not set, any certificate that is required to be disclosed via 
 
 This policy allows disabling Certificate Transparency disclosure requirements for certificate chains that contain certificates with one of the specified subjectPublicKeyInfo hashes. This allows certificates that would otherwise be untrusted, because they were not properly publicly disclosed, to continue to be used for Enterprise hosts.
 
-In order for Certificate Transparency enforcement to be disabled when this policy is set, the hash must be of a subjectPublicKeyInfo appearing in a CA certificate that is recognized as a Legacy Certificate Authority (CA). A Legacy CA is a CA that has been publicly trusted by default one or more operating systems supported by Chromium, but is not trusted by the Android Open Source Project or Chromium OS.
+In order for Certificate Transparency enforcement to be disabled when this policy is set, the hash must be of a subjectPublicKeyInfo appearing in a CA certificate that is recognized as a Legacy Certificate Authority (CA). A Legacy CA is a CA that has been publicly trusted by default one or more operating systems supported by Orca, but is not trusted by the Android Open Source Project or Orca OS.
 
 A subjectPublicKeyInfo hash is specified by concatenating the hash algorithm name, the \\&quot;/\\&quot; character, and the Base64 encoding of that hash algorithm applied to the DER-encoded subjectPublicKeyInfo of the specified certificate. This Base64 encoding is the same format as an SPKI Fingerprint, as defined in RFC 7469, Section 2.4. Unrecognized hash algorithms are ignored. The only supported hash algorithm at this time is \\&quot;sha256\\&quot;.
 
@@ -118,7 +118,7 @@ A URL pattern is formatted according to https://www.chromium.org/administrators/
 
 If this policy is not set, any certificate that is required to be disclosed via Certificate Transparency will be treated as untrusted if it is not disclosed according to the Certificate Transparency policy.</string>
   <string name="ContextualSearchEnabledTitle">Enable Tap to Search</string>
-  <string name="ContextualSearchEnabledDesc">Enables the availability of Tap to Search in Chromium\'s content view.
+  <string name="ContextualSearchEnabledDesc">Enables the availability of Tap to Search in Orca\'s content view.
 
 If you enable this setting, Tap to Search will be available to the user and they can choose to turn the feature on or off.
 
@@ -126,7 +126,7 @@ If you disable this setting, Tap to Search will be disabled completely.
 
 If this policy is left not set, it is equivalent to being enabled, see description above.</string>
   <string name="ContextualSuggestionsEnabledTitle">Enable contextual suggestions of related web pages</string>
-  <string name="ContextualSuggestionsEnabledDesc">If this is set to true or unset, Chromium will suggest pages related to the current page.
+  <string name="ContextualSuggestionsEnabledDesc">If this is set to true or unset, Orca will suggest pages related to the current page.
 These suggestions are fetched remotely from Google servers.
 
 If this setting is set to false, suggestions will not be fetched or displayed.</string>
@@ -147,7 +147,7 @@ See also policies \'CookiesAllowedForUrls\' and \'CookiesSessionOnlyForUrls\'. N
 
 For URLs not covered by the patterns specified here, or for all URLs if this policy is not set, the global default value will be used either from the \'DefaultCookiesSetting\' policy, if it is set, or the user\'s personal configuration otherwise.
 
-Note that if Chromium is running in \'background mode\', the session may not be closed when the last browser window is closed, but will instead stay active until the browser exits. Please see the \'BackgroundModeEnabled\' policy for more information about configuring this behavior.
+Note that if Orca is running in \'background mode\', the session may not be closed when the last browser window is closed, but will instead stay active until the browser exits. Please see the \'BackgroundModeEnabled\' policy for more information about configuring this behavior.
 
 See also policies \'CookiesAllowedForUrls\' and \'CookiesBlockedForUrls\'. Note that there must be no conflicting URL patterns between these three policies - it is unspecified which policy takes precedence.
 
@@ -161,7 +161,7 @@ If this policy is left not set, the data compression proxy feature will be avail
   <string name="DefaultCookiesSettingTitle">Default cookies setting</string>
   <string name="DefaultCookiesSettingDesc">Allows you to set whether websites are allowed to set local data. Setting local data can be either allowed for all websites or denied for all websites.
 
-If this policy is set to \'Keep cookies for the duration of the session\' then cookies will be cleared when the session closes. Note that if Chromium is running in \'background mode\', the session may not close when the last window is closed. Please see the \'BackgroundModeEnabled\' policy for more information about configuring this behavior.
+If this policy is set to \'Keep cookies for the duration of the session\' then cookies will be cleared when the session closes. Note that if Orca is running in \'background mode\', the session may not close when the last window is closed. Please see the \'BackgroundModeEnabled\' policy for more information about configuring this behavior.
 
 If this policy is left not set, \'AllowCookies\' will be used and the user will be able to change it.</string>
   <string-array name="DefaultCookiesSettingEntries">
@@ -227,7 +227,7 @@ You can specify the default search provider to be used by setting the rest of th
 
 If you disable this setting, no search is performed when the user enters non-URL text in the omnibox.
 
-If you enable or disable this setting, users cannot change or override this setting in Chromium.
+If you enable or disable this setting, users cannot change or override this setting in Orca.
 
 If this policy is left not set, the default search provider is enabled, and the user will be able to set the search provider list.
 
@@ -360,11 +360,11 @@ While the policy itself is supported on the above platforms, the feature it is e
 
 If this policy set to false, Google Cast will be disabled.</string>
   <string name="EnableSymantecLegacyInfrastructureTitle">Whether to enable trust in Symantec Corporation\'s Legacy PKI Infrastructure</string>
-  <string name="EnableSymantecLegacyInfrastructureDesc">When this setting is enabled, Chromium allows certificates issued by Symantec Corporation\'s Legacy PKI operations to be trusted if they otherwise successfully validate and chain to a recognized CA certificate.
+  <string name="EnableSymantecLegacyInfrastructureDesc">When this setting is enabled, Orca allows certificates issued by Symantec Corporation\'s Legacy PKI operations to be trusted if they otherwise successfully validate and chain to a recognized CA certificate.
 
 Note that this policy depends on the operating system still recognizing certificates from Symantec\'s legacy infrastructure. If an OS update changes the OS handling of such certificates, this policy no longer has effect.  Further, this policy is intended as a temporary workaround to give enterprises more time to transition away from legacy Symantec certificates.  This policy will be removed on or around January 1st 2019.
 
-If this policy is not set, or it is set to false, then Chromium follows the publicly announced deprecation schedule.
+If this policy is not set, or it is set to false, then Orca follows the publicly announced deprecation schedule.
 
 See https://g.co/chrome/symantecpkicerts for more details on this deprecation.</string>
   <string name="EnterpriseHardwarePlatformAPIEnabledTitle">Enables managed extensions to use the Enterprise Hardware Platform API</string>
@@ -386,7 +386,7 @@ If this setting is set to Strict, Strict Restricted Mode on YouTube is always ac
 If this setting is set to Moderate, the user may only pick Moderate Restricted Mode
 and Strict Restricted Mode on YouTube, but cannot disable Restricted Mode.
 
-If this setting is set to Off or no value is set, Restricted Mode on YouTube is not enforced by Chromium. External policies such as YouTube policies might still enforce Restricted Mode, though.</string>
+If this setting is set to Off or no value is set, Restricted Mode on YouTube is not enforced by Orca. External policies such as YouTube policies might still enforce Restricted Mode, though.</string>
   <string-array name="ForceYouTubeRestrictEntries">
     <item>Do not enforce Restricted Mode on YouTube</item>
     <item>Enforce at least Moderate Restricted Mode on YouTube</item>
@@ -398,7 +398,7 @@ If this setting is set to Off or no value is set, Restricted Mode on YouTube is 
     <item>2</item>
   </string-array>
   <string name="IncognitoModeAvailabilityTitle">Incognito mode availability</string>
-  <string name="IncognitoModeAvailabilityDesc">Specifies whether the user may open pages in Incognito mode in Chromium.
+  <string name="IncognitoModeAvailabilityDesc">Specifies whether the user may open pages in Incognito mode in Orca.
 
 If \'Enabled\' is selected or the policy is left unset, pages may be opened in Incognito mode.
 
@@ -440,7 +440,7 @@ If this policy is left not set the global default value will be used for all sit
   <string name="ManagedBookmarksTitle">Managed Bookmarks</string>
   <string name="ManagedBookmarksDesc">Configures a list of managed bookmarks.
 
-The policy consists of a list of bookmarks whereas each bookmark is a dictionary containing the keys \\&quot;name\\&quot; and \\&quot;url\\&quot; which hold the bookmark\'s name and its target. A subfolder may be configured by defining a bookmark without an \\&quot;url\\&quot; key but with an additional \\&quot;children\\&quot; key which itself contains a list of bookmarks as defined above (some of which may be folders again). Chromium amends incomplete URLs as if they were submitted via the Omnibox, for example \\&quot;google.com\\&quot; becomes \\&quot;https://google.com/\\&quot;.
+The policy consists of a list of bookmarks whereas each bookmark is a dictionary containing the keys \\&quot;name\\&quot; and \\&quot;url\\&quot; which hold the bookmark\'s name and its target. A subfolder may be configured by defining a bookmark without an \\&quot;url\\&quot; key but with an additional \\&quot;children\\&quot; key which itself contains a list of bookmarks as defined above (some of which may be folders again). Orca amends incomplete URLs as if they were submitted via the Omnibox, for example \\&quot;google.com\\&quot; becomes \\&quot;https://google.com/\\&quot;.
 
 These bookmarks are placed in a folder that can\'t be modified by the user (but the user can choose to hide it from the bookmark bar). By default the folder name is \\&quot;Managed bookmarks\\&quot; but it can be customized by adding to the list of bookmarks a dictionary containing the key \\&quot;toplevel_name\\&quot; with the desired folder name as the value.
 
@@ -450,11 +450,11 @@ Managed bookmarks are not synced to the user account and can\'t be modified by e
 
 If this is set to false, automatically-generated content suggestions are not shown on the New Tab page.</string>
   <string name="NetworkPredictionOptionsTitle">Enable network prediction</string>
-  <string name="NetworkPredictionOptionsDesc">Enables network prediction in Chromium and prevents users from changing this setting.
+  <string name="NetworkPredictionOptionsDesc">Enables network prediction in Orca and prevents users from changing this setting.
 
 This controls DNS prefetching, TCP and SSL preconnection and prerendering of web pages.
 
-If you set this policy, users cannot change or override this setting in Chromium.
+If you set this policy, users cannot change or override this setting in Orca.
 
 If this policy is left not set, network prediction will be enabled but the user will be able to change it.</string>
   <string-array name="NetworkPredictionOptionsEntries">
@@ -499,12 +499,12 @@ For more information on secure contexts, see
 https://www.w3.org/TR/secure-contexts/.
 </string>
   <string name="PasswordManagerEnabledTitle">Enable saving passwords to the password manager</string>
-  <string name="PasswordManagerEnabledDesc">If this setting is enabled, users can have Chromium memorize passwords and provide them automatically the next time they log in to a site.
+  <string name="PasswordManagerEnabledDesc">If this setting is enabled, users can have Orca memorize passwords and provide them automatically the next time they log in to a site.
 
 If this settings is disabled, users cannot save new passwords but they
 may still use passwords that have been saved previously.
 
-If this policy is enabled or disabled, users cannot change or override it in Chromium. If this policy is unset, password saving is allowed (but can be turned off by the user).</string>
+If this policy is enabled or disabled, users cannot change or override it in Orca. If this policy is unset, password saving is allowed (but can be turned off by the user).</string>
   <string name="PopupsAllowedForUrlsTitle">Allow popups on these sites</string>
   <string name="PopupsAllowedForUrlsDesc">Allows you to set a list of url patterns that specify sites which are allowed to open popups.
 
@@ -514,13 +514,13 @@ If this policy is left not set the global default value will be used for all sit
 
 If this policy is left not set the global default value will be used for all sites either from the \'DefaultPopupsSetting\' policy if it is set, or the user\'s personal configuration otherwise.</string>
   <string name="PrintingEnabledTitle">Enable printing</string>
-  <string name="PrintingEnabledDesc">Enables printing in Chromium and prevents users from changing this setting.
+  <string name="PrintingEnabledDesc">Enables printing in Orca and prevents users from changing this setting.
 
 If this setting is enabled or not configured, users can print.
 
-If this setting is disabled, users cannot print from Chromium. Printing is disabled in the wrench menu, extensions, JavaScript applications, etc. It is still possible to print from plugins that bypass Chromium while printing. For example, certain Flash applications have the print option in their context menu, which is not covered by this policy.</string>
+If this setting is disabled, users cannot print from Orca. Printing is disabled in the wrench menu, extensions, JavaScript applications, etc. It is still possible to print from plugins that bypass Orca while printing. For example, certain Flash applications have the print option in their context menu, which is not covered by this policy.</string>
   <string name="ProxyBypassListTitle">Proxy bypass rules</string>
-  <string name="ProxyBypassListDesc">Chromium will bypass any proxy for the list of hosts given here.
+  <string name="ProxyBypassListDesc">Orca will bypass any proxy for the list of hosts given here.
 
 This policy only takes effect if you have selected manual proxy settings at \'Choose how to specify proxy server settings\'.
 
@@ -529,7 +529,7 @@ You should leave this policy not set if you have selected any other mode for set
 For more detailed examples, visit:
 https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett.</string>
   <string name="ProxyModeTitle">Choose how to specify proxy server settings</string>
-  <string name="ProxyModeDesc">Allows you to specify the proxy server used by Chromium and prevents users from changing proxy settings.
+  <string name="ProxyModeDesc">Allows you to specify the proxy server used by Orca and prevents users from changing proxy settings.
 
 If you choose to never use a proxy server and always connect directly, all other options are ignored.
 
@@ -544,7 +544,7 @@ If you choose to use a .pac proxy script, you must specify the URL to the script
 For detailed examples, visit:
 https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett.
 
-If you enable this setting, Chromium and ARC-apps ignore all proxy-related options specified from the command line.
+If you enable this setting, Orca and ARC-apps ignore all proxy-related options specified from the command line.
 
 Leaving this policy not set will allow the users to choose the proxy settings on their own.</string>
   <string-array name="ProxyModeEntries">
@@ -579,23 +579,23 @@ You should leave this policy not set if you have selected any other mode for set
 
 For more options and detailed examples, visit:
 https://www.chromium.org/developers/design-documents/network-settings#TOC-Command-line-options-for-proxy-sett.</string>
-  <string name="RestrictAccountsToPatternsTitle">Restrict accounts that are visible in Chromium</string>
-  <string name="RestrictAccountsToPatternsDesc">Contains a list of patterns which are used to control the visiblity of accounts in Chromium.
+  <string name="RestrictAccountsToPatternsTitle">Restrict accounts that are visible in Orca</string>
+  <string name="RestrictAccountsToPatternsDesc">Contains a list of patterns which are used to control the visiblity of accounts in Orca.
 
-Each Google account on the device will be compared to patterns stored in this policy to determine the account visibility in Chromium. The account will be visible if its name matches any pattern on the list. Otherwise, the account will be hidden.
+Each Google account on the device will be compared to patterns stored in this policy to determine the account visibility in Orca. The account will be visible if its name matches any pattern on the list. Otherwise, the account will be hidden.
 
 Use the wildcard character \'*\' to match zero or more arbitrary characters. The escape character is \'\\\', so to match actual \'*\' or \'\\\' characters, put a \'\\\' in front of them.
 
-If this policy is not set, all Google accounts on the device will be visible in Chromium.</string>
+If this policy is not set, all Google accounts on the device will be visible in Orca.</string>
   <string name="SSLErrorOverrideAllowedTitle">Allow proceeding from the SSL warning page</string>
   <string name="SSLErrorOverrideAllowedDesc">Chrome shows a warning page when users navigate to sites that have SSL errors. By default or when this policy is set to true, users are allowed to click through these warning pages.
 Setting this policy to false disallows users to click through any warning page.</string>
   <string name="SSLVersionMaxTitle">Maximum SSL version enabled</string>
-  <string name="SSLVersionMaxDesc">Warning: The max TLS version policy will be entirely removed from Chromium around version 75 (around June 2019).
+  <string name="SSLVersionMaxDesc">Warning: The max TLS version policy will be entirely removed from Orca around version 75 (around June 2019).
 
-If this policy is not configured then Chromium uses the default maximum version.
+If this policy is not configured then Orca uses the default maximum version.
 
-Otherwise it may be set to one of the following values: \\&quot;tls1.2\\&quot; or \\&quot;tls1.3\\&quot;. When set, Chromium will not use SSL/TLS versions greater than the specified version. An unrecognized value will be ignored.</string>
+Otherwise it may be set to one of the following values: \\&quot;tls1.2\\&quot; or \\&quot;tls1.3\\&quot;. When set, Orca will not use SSL/TLS versions greater than the specified version. An unrecognized value will be ignored.</string>
   <string-array name="SSLVersionMaxEntries">
     <item>TLS 1.2</item>
     <item>TLS 1.3</item>
@@ -605,9 +605,9 @@ Otherwise it may be set to one of the following values: \\&quot;tls1.2\\&quot; o
     <item>tls1.3</item>
   </string-array>
   <string name="SSLVersionMinTitle">Minimum SSL version enabled</string>
-  <string name="SSLVersionMinDesc">If this policy is not configured then Chromium uses a default minimum version which is TLS 1.0.
+  <string name="SSLVersionMinDesc">If this policy is not configured then Orca uses a default minimum version which is TLS 1.0.
 
-Otherwise it may be set to one of the following values: \\&quot;tls1\\&quot;, \\&quot;tls1.1\\&quot; or \\&quot;tls1.2\\&quot;. When set, Chromium will not use SSL/TLS versions less than the specified version. An unrecognized value will be ignored.</string>
+Otherwise it may be set to one of the following values: \\&quot;tls1\\&quot;, \\&quot;tls1.1\\&quot; or \\&quot;tls1.2\\&quot;. When set, Orca will not use SSL/TLS versions less than the specified version. An unrecognized value will be ignored.</string>
   <string-array name="SSLVersionMinEntries">
     <item>TLS 1.0</item>
     <item>TLS 1.1</item>
@@ -619,13 +619,13 @@ Otherwise it may be set to one of the following values: \\&quot;tls1\\&quot;, \\
     <item>tls1.2</item>
   </string-array>
   <string name="SafeBrowsingEnabledTitle">Enable Safe Browsing</string>
-  <string name="SafeBrowsingEnabledDesc">Enables Chromium\'s Safe Browsing feature and prevents users from changing this setting.
+  <string name="SafeBrowsingEnabledDesc">Enables Orca\'s Safe Browsing feature and prevents users from changing this setting.
 
 If you enable this setting, Safe Browsing is always active.
 
 If you disable this setting, Safe Browsing is never active.
 
-If you enable or disable this setting, users cannot change or override the \\&quot;Enable phishing and malware protection\\&quot; setting in Chromium.
+If you enable or disable this setting, users cannot change or override the \\&quot;Enable phishing and malware protection\\&quot; setting in Orca.
 
 If this policy is left not set, this will be enabled but the user will be able to change it.
 
@@ -633,19 +633,19 @@ See https://developers.google.com/safe-browsing for more info on Safe Browsing.
 
 This policy is available only on Windows instances that are joined to a Microsoft® Active Directory® domain. or Windows 10 Pro or Enterprise instances that enrolled for device management.</string>
   <string name="SavingBrowserHistoryDisabledTitle">Disable saving browser history</string>
-  <string name="SavingBrowserHistoryDisabledDesc">Disables saving browser history in Chromium and prevents users from changing this setting.
+  <string name="SavingBrowserHistoryDisabledDesc">Disables saving browser history in Orca and prevents users from changing this setting.
 
 If this setting is enabled, browsing history is not saved. This setting also disables tab syncing.
 
 If this setting is disabled or not set, browsing history is saved.</string>
   <string name="SearchSuggestEnabledTitle">Enable search suggestions</string>
-  <string name="SearchSuggestEnabledDesc">Enables search suggestions in Chromium\'s omnibox and prevents users from changing this setting.
+  <string name="SearchSuggestEnabledDesc">Enables search suggestions in Orca\'s omnibox and prevents users from changing this setting.
 
 If you enable this setting, search suggestions are used.
 
 If you disable this setting, search suggestions are never used.
 
-If you enable or disable this setting, users cannot change or override this setting in Chromium.
+If you enable or disable this setting, users cannot change or override this setting in Orca.
 
 If this policy is left not set, this will be enabled but the user will be able to change it.</string>
   <string name="SitePerProcessAndroidTitle">Enable Site Isolation for every site</string>
@@ -660,13 +660,13 @@ NOTE: On Android, Site Isolation is experimental. Support will improve over time
 NOTE: This policy applies only to Chrome on Android running on devices with strictly more than 1GB of RAM. To apply the policy on non-Android platforms, use SitePerProcess.
 </string>
   <string name="TranslateEnabledTitle">Enable Translate</string>
-  <string name="TranslateEnabledDesc">Enables the integrated Google Translate service on Chromium.
+  <string name="TranslateEnabledDesc">Enables the integrated Google Translate service on Orca.
 
-If you enable this setting, Chromium will offer translation functionality to the user by showing an integrated translate toolbar (when appropriate) and a translate option on the right-click context menu.
+If you enable this setting, Orca will offer translation functionality to the user by showing an integrated translate toolbar (when appropriate) and a translate option on the right-click context menu.
 
 If you disable this setting, all built-in translate features will be disabled.
 
-If you enable or disable this setting, users cannot change or override this setting in Chromium.
+If you enable or disable this setting, users cannot change or override this setting in Orca.
 
 If this setting is left not set the user can decide to use this function or not.</string>
   <string name="URLBlacklistTitle">Block access to a list of URLs</string>
@@ -694,7 +694,7 @@ This policy is limited to 1000 entries; subsequent entries will be ignored.
 
 If this policy is not set there will be no exceptions to the blacklist from the \'URLBlacklist\' policy.</string>
   <string name="UrlKeyedAnonymizedDataCollectionEnabledTitle">Enable URL-keyed anonymized data collection</string>
-  <string name="UrlKeyedAnonymizedDataCollectionEnabledDesc">Enable URL-keyed anonymized data collection in Chromium and prevents users from changing this setting.
+  <string name="UrlKeyedAnonymizedDataCollectionEnabledDesc">Enable URL-keyed anonymized data collection in Orca and prevents users from changing this setting.
 
 URL-keyed anonymized data collection sends URLs of pages the user visits to Google to make searches and browsing better.
 
